@@ -20,7 +20,7 @@ f_todos.write(HEADER)
 					"&tr=#{params[4]}&claves=&origen="
 		ult_url = url
 		aviso = open(url).read
-		if (aviso =~ /4216271/).nil?
+		if (aviso =~ /4216271/).nil? and (aviso =~ /FAVIAN HOYOS NEGOCIOS INMOBILIARIOS/i).nil?
 			aviso.gsub!(/(<br \/>\n){2,}/, "")
 			aviso.gsub!(%r#<table width="98%".*?</table>#m, "")
 			aviso.gsub!(/<a.+onclick='filtrarBusqueda.+/i, "")
