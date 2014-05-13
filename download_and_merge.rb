@@ -6,7 +6,7 @@ f_todos = File.new("#{dir}/todos.html", "w+")
 HEADER = %Q{<!doctype html><html><head><meta charset="utf-8"><title>Untitled</title></head><body>}
 FOOTER = %Q{</body></html>}
 f_todos.write(HEADER)
-1.upto(7) do |i|
+1.upto(8) do |i|
 	print "Procesando página #{i} "
 	html = open("http://www.clasificadospanorama.com/clasif.main.php?op=subrubrores&ID=29&tr=30&page=#{i}").read
 	f = File.new("#{dir}/#{i}.html", "w+")
